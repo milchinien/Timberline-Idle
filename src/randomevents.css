@@ -1,0 +1,46 @@
+/* Zufallsereignisse: Schild oben rechts über der Welt + Händler-Fenster */
+#event-banner {
+  position: absolute; top: 12px; right: 12px; z-index: 8;
+  display: flex; align-items: center; gap: 10px;
+  width: 270px; padding: 8px 12px;
+  background: var(--tex-oak) 0 0 / var(--tex-oak-w) var(--tex-oak-h);
+  border: var(--px) solid var(--wood-dark);
+  box-shadow: inset 0 0 0 var(--px) rgba(255, 210, 140, 0.25), 0 calc(var(--px) * 2) 0 rgba(0, 0, 0, 0.45);
+  transform-origin: 50% 0;
+  pointer-events: none;
+}
+#event-banner[hidden] { display: none; }
+#event-banner.show { animation: board-drop 0.55s ease-out both; }
+#event-banner.clickable { pointer-events: auto; cursor: var(--cur-pointer); }
+#event-banner.clickable:hover { filter: brightness(1.1); }
+#event-banner .ev-icon { flex: none; width: 36px; height: 36px; display: grid; place-items: center; }
+#event-banner .ev-icon .game-icon { width: 32px; height: 32px; }
+#event-banner .ev-text { flex: 1; min-width: 0; }
+#event-banner b { display: block; font-size: 17px; color: #ffe27a; text-shadow: 0 2px 0 #000; }
+#event-banner .ev-text > span { display: block; font-size: 12px; color: #f6e2b4; line-height: 1.25; }
+#event-banner .fill-bar { height: 6px; margin-top: 4px; }
+#event-banner .fill-bar-in { background: #6fb7e8; transition: none; }
+#event-banner[data-event="golden"] .fill-bar-in { background: #f0c84a; }
+#event-banner[data-event="market"] .fill-bar-in { background: #7fc95e; }
+#event-banner[data-event="merchant"] .fill-bar-in { background: #c98ae0; }
+#event-banner[data-event="storm"] .fill-bar-in { background: #e8603c; }
+#event-banner[data-event="golden"] { box-shadow: inset 0 0 0 var(--px) rgba(240, 200, 74, 0.7), 0 0 14px rgba(255, 220, 90, 0.5), 0 calc(var(--px) * 2) 0 rgba(0, 0, 0, 0.45); }
+
+/* Händler-Fenster */
+.merchant-head { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+.merchant-head img { width: 60px; height: 66px; image-rendering: pixelated; flex: none; }
+.merchant-head p { margin: 0; color: #f6e2b4; line-height: 1.4; }
+.merchant-head b { color: #ffe27a; }
+.offer-list { display: flex; flex-direction: column; gap: 8px; }
+.offer-card {
+  display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 12px;
+  padding: 8px 10px;
+  background: rgba(36, 12, 0, 0.55);
+  border: 2px solid var(--wood-dark);
+}
+.offer-card.bought { opacity: 0.55; }
+.offer-icon { display: grid; place-items: center; width: 44px; height: 44px; }
+.offer-icon .game-icon { width: 36px; height: 36px; }
+.offer-card b { display: block; font-size: 15px; color: #fff4dc; }
+.offer-card span { font-size: 12px; color: #d8c8a8; }
+.merchant-timer { margin-top: 10px; font-size: 12px; text-align: center; color: #d8aa6a; }

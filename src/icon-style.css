@@ -1,0 +1,40 @@
+/* AI-generated transparent pictograms, with stable dimensions at every UI scale. */
+.game-icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  min-width: 1.25em;
+  object-fit: contain;
+  vertical-align: -0.25em;
+  flex-shrink: 0;
+  image-rendering: auto;
+  pointer-events: none;
+}
+.hud-icon .game-icon { width: 28px; height: 28px; min-width: 28px; }
+.tab-gem .game-icon { width: 25px; height: 25px; min-width: 25px; }
+.tab-gem .game-icon, .node-icon .game-icon { display: block; }
+.node-icon { display: grid; place-items: center; line-height: 0; }
+.node-icon .game-icon { width: 32px; height: 32px; min-width: 32px; }
+.node-cost .game-icon { width: 13px; height: 13px; min-width: 13px; }
+.node-cost, .node-level { display: inline-flex; align-items: center; justify-content: center; gap: 3px; }
+.node-level[hidden] { display: none; }
+.node-level .game-icon { width: 13px; height: 13px; min-width: 13px; }
+.tip-icon .game-icon { width: 30px; height: 30px; min-width: 30px; }
+.window-close .game-icon, .decline-btn .game-icon { width: 19px; height: 19px; min-width: 19px; vertical-align: middle; }
+.gear-btn .game-icon { width: 24px; height: 24px; min-width: 24px; vertical-align: middle; }
+.menu-title-axe .game-icon { width: 46px; height: 46px; min-width: 46px; }
+.menu-btn i { display: inline-flex; align-items: center; justify-content: center; }
+.menu-btn i .game-icon { width: 30px; height: 30px; min-width: 30px; }
+.ach-icon .game-icon, .ach-toast-icon .game-icon { width: 32px; height: 32px; min-width: 32px; }
+.tut-icons { display: flex; align-items: center; justify-content: center; gap: 6px; }
+.tut-icons .game-icon { width: 34px; height: 34px; min-width: 34px; }
+.hearts { white-space: nowrap; }
+.hearts .game-icon { width: 15px; height: 15px; min-width: 15px; }
+.icon-heart-empty { filter: grayscale(1); opacity: 0.3; }
+.icon-north-east { transform: rotate(-45deg); }
+.icon-south-east { transform: rotate(45deg); }
+.icon-south-west { transform: rotate(135deg); }
+.icon-north-west { transform: rotate(-135deg); }
+.icon-left, .icon-down { transform: rotate(180deg); }
+.item-icon, .shop-icon, .order-chip img, .slot-sprout { image-rendering: auto; object-fit: contain; }
+.shop-icon { padding: 4px; }
